@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<!--
+  To Do:
+  Limpeza Código
+
+  v2.0.1
+  Utilizar create object
+-->
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Horários de autocarro para a Esquimó <3">
+  <meta name="viewport" content="width=device-width">
+  <title>Horários</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--PWA-->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <h1>Horários</h1>
+  <div id="container">
+    <div id="botoesEscolha">
+      <div class="botaoHorario" onclick="mostrarHorario('metroMondegoIda')">Metro Mondego Ida</div>
+      <div class="botaoHorario" onclick="mostrarHorario('metroMondegoVolta')">Metro Mondego Volta</div>
+      <div class="botaoHorario" onclick="mostrarHorario('smtuc5ida')">SMTUC 5 Ida</div>
+      <div class="botaoHorario" onclick="mostrarHorario('smtuc5volta')">SMTUC 5 Volta</div>
+      <div class="botaoHorario" onclick="mostrarHorario('smtuc35volta')">SMTUC 35 Volta</div>
+      <div class="botaoHorario" onclick="mostrarHorario('smtuc7Tvolta')">SMTUC 7T Volta</div>
+    </div>
+    <div id="conteudo"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
