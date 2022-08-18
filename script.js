@@ -1,7 +1,7 @@
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.2.1";
+var versao = "v2.2.4";
 
 // FUNÇÃO PARA MOSTRAR HORÁRIO
 
