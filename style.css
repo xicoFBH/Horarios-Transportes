@@ -2,6 +2,7 @@
 {
   box-sizing: border-box;
 }
+
 body 
 {
   height: 100%;
@@ -9,6 +10,7 @@ body
   margin: 0;
   padding: 10px;
 }
+
 h1, h3, h4
 {
   font-family: arial;
@@ -24,12 +26,14 @@ table, th, td
   font-family: arial;
   font-size: 12px;
 }
+
 table
 {
   margin: auto;
   max-width: 90%;
   margin-bottom: 20px;
 }
+
 th, td
 {
   padding: 5px;
@@ -40,8 +44,7 @@ tr:nth-child(even)
   background-color: yellow;
 }
 
-
-/*.titulo*/th
+th
 {
   position: sticky;
   top: 0;
@@ -54,6 +57,7 @@ tr:nth-child(even)
   display: flex;
   justify-content: space-between;
 }
+
 .botaoHorario
 {
   display: flex;
@@ -70,6 +74,7 @@ tr:nth-child(even)
   -webkit-user-select: none;
   user-select: none;
 }
+
 #conteudo
 {
   font-family: arial;
@@ -89,33 +94,6 @@ tr:nth-child(even)
 }
 
 .direto
-{
-  background: green !important;
-  color: white;
-}
-
-#tabela1 > #linha3,
-#tabela1 > #linha6,
-#tabela1 > #linha11,
-#tabela1 > #linha21
-{
-  background: red !important; 
-  color: white;
-}
-
-#tabela1 > #linha4,
-#tabela1 > #linha8,
-#tabela1 > #linha10,
-#tabela1 > #linha13,
-#tabela1 > #linha17,
-#tabela1 > #linha19,
-#tabela1 > #linha23,
-#tabela1 > #linha25,
-#tabela1 > #linha30,
-#tabela1 > #linha32,
-
-#linha2_3,
-#tabela2 > #linha2_3
 {
   background: green !important;
   color: white;
