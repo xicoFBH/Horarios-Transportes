@@ -1,7 +1,7 @@
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.1.1";
+var versao = "v2.1.2";
 
 // FUNÇÃO PARA MOSTRAR HORÁRIO
 
@@ -10,86 +10,12 @@ function mostrarHorario (horarioAMostrar)
   if (horarioAMostrar == "metroMondegoIda")
   {
     document.getElementsByClassName("botaoHorario")[0].style.border = "3px solid black";
-    /*
     document.getElementsByClassName("botaoHorario")[1].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[2].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[3].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[4].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[5].style.border = "2px solid black";
-    */
 
-    for (i = 0; i <= 5; i++)
-    {
-      if (i === 0) { continue; }
-      document.getElementsByClassName("botaoHorario")[i].style.border = "2px solid black";
-    }
-
-    /*!!!!!!!!!!!!!!!!!!!!
-    TABELA 1 SEGUNDA A SEXTA
-    !!!!!!!!!!!!!!!!!!!!*/
-
-    /*
-    titulo1 = document.createElement("h3");
-    titulo1.innerHTML = "Segunda a Sexta";
-    document.getElementById("conteudo").appendChild(titulo1);
-
-    tabela1 = document.createElement("table");
-    tabela1.id = "tabela1";
-    document.getElementById("conteudo").appendChild(tabela1);
-
-    headers = document.createElement("tr");
-    headers.innerHTML = "<th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>";
-    document.getElementById("tabela1").appendChild(headers);
-    */
-    //document.getElementsByTagName("table")[0].appendChild(headers);
-
-    /*
-    for (i = 0; i < metroMondegoIda.length; i++)
-    {
-      linha = document.createElement("tr");
-      linha.id = "linha"+i;
-      document.getElementsByTagName("table")[0].appendChild(linha);
-      for (j = 0; j < metroMondegoIda[i].length; j++)
-      {
-        dados =  document.createElement("td");
-        dados.innerHTML = metroMondegoIda[i][j];
-        document.getElementById("linha"+i).appendChild(dados);
-      }
-    }
-    */
-
-    /*!!!!!!!!!!!!!!!!!!!!
-    TABELA 2 SÁBADO
-    !!!!!!!!!!!!!!!!!!!!*/
-
-    /*
-    titulo2 = document.createElement("h3");
-    titulo2.innerHTML = "Sábado";
-    document.getElementById("conteudo").appendChild(titulo2);
-
-    tabela2 = document.createElement("table");
-    tabela2.id = "tabela2";
-    document.getElementById("conteudo").appendChild(tabela2);
-
-    headers = document.createElement("tr");
-    headers.innerHTML = "<th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>";
-    document.getElementById("tabela2").appendChild(headers);
-    //document.getElementsByTagName("table")[0].appendChild(headers);
-    
-    for (i = 0; i < metroMondegoIdaSabado.length; i++)
-    {
-      linha2 = document.createElement("tr");
-      linha2.id = "linha2_"+i;
-      document.getElementById("tabela2").appendChild(linha2);
-      for (j = 0; j < metroMondegoIdaSabado[i].length; j++)
-      {
-        dados =  document.createElement("td");
-        dados.innerHTML = metroMondegoIdaSabado[i][j];
-        document.getElementById("linha2_"+i).appendChild(dados);
-      }
-    }
-    */
-    
     document.getElementById("conteudo").innerHTML = 
       "<h3>Segunda a Sexta</h3>"+
       "<table>"+
