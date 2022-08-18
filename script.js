@@ -1,7 +1,7 @@
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.0.1";
+var versao = "v2.1";
 
 // LOUSÃ -> COIMBRA
 
@@ -129,32 +129,17 @@ metroMondegoIdaSabadoSerpins =
 
 metroMondegoIdaDomingoFeriado =
 [
-  ["05:25", "06:24", "06:35", "NORMAL"],
-  ["07:25", "08:24", "08:35", "NORMAL"],
-  ["07:55", "08:54", "09:05", "NORMAL"],
-  ["08:55", "09:54", "10:05", "NORMAL"],
-  ["10:25", "11:24", "11:35", "NORMAL"],
-  ["12:25", "13:24", "13:35", "NORMAL"],
-  ["14:25", "15:24", "15:35", "NORMAL"],
-  ["16:25", "17:24", "17:35", "NORMAL"],
-  ["18:25", "19:24", "19:35", "NORMAL"],
-  ["20:25", "21:24", "21:35", "NORMAL"],
-  ["22:25", "23:24", "23:35", "NORMAL"]
-]
-
-metroMondegoIdaDomingoFeriadoSerpins =
-[
-  "05:10",
-  "07:10",
-  "07:40",
-  "08:40",
-  "10:10",
-  "12:10",
-  "14:10",
-  "16:10",
-  "18:10",
-  "20:10",
-  "22:10"
+  ["05:10", "05:25", "06:24", "06:35", "NORMAL"],
+  ["07:10", "07:25", "08:24", "08:35", "NORMAL"],
+  ["07:40", "07:55", "08:54", "09:05", "NORMAL"],
+  ["08:40", "08:55", "09:54", "10:05", "NORMAL"],
+  ["10:10", "10:25", "11:24", "11:35", "NORMAL"],
+  ["12:10", "12:25", "13:24", "13:35", "NORMAL"],
+  ["14:10", "14:25", "15:24", "15:35", "NORMAL"],
+  ["16:10", "16:25", "17:24", "17:35", "NORMAL"],
+  ["18:10", "18:25", "19:24", "19:35", "NORMAL"],
+  ["20:10", "20:25", "21:24", "21:35", "NORMAL"],
+  ["22:10", "22:25", "23:24", "23:35", "NORMAL"]
 ]
   
 // COIMBRA -> LOUSÃ
@@ -457,11 +442,86 @@ function mostrarHorario (horarioAMostrar)
   if (horarioAMostrar == "metroMondegoIda")
   {
     document.getElementsByClassName("botaoHorario")[0].style.border = "3px solid black";
+    /*
     document.getElementsByClassName("botaoHorario")[1].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[2].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[3].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[4].style.border = "2px solid black";
     document.getElementsByClassName("botaoHorario")[5].style.border = "2px solid black";
+    */
+
+    for (i = 0; i <= 5; i++)
+    {
+      if (i === 0) { continue; }
+      document.getElementsByClassName("botaoHorario")[i].style.border = "2px solid black";
+    }
+
+    /*!!!!!!!!!!!!!!!!!!!!
+    TABELA 1 SEGUNDA A SEXTA
+    !!!!!!!!!!!!!!!!!!!!*/
+
+    /*
+    titulo1 = document.createElement("h3");
+    titulo1.innerHTML = "Segunda a Sexta";
+    document.getElementById("conteudo").appendChild(titulo1);
+
+    tabela1 = document.createElement("table");
+    tabela1.id = "tabela1";
+    document.getElementById("conteudo").appendChild(tabela1);
+
+    headers = document.createElement("tr");
+    headers.innerHTML = "<th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>";
+    document.getElementById("tabela1").appendChild(headers);
+    */
+    //document.getElementsByTagName("table")[0].appendChild(headers);
+
+    /*
+    for (i = 0; i < metroMondegoIda.length; i++)
+    {
+      linha = document.createElement("tr");
+      linha.id = "linha"+i;
+      document.getElementsByTagName("table")[0].appendChild(linha);
+      for (j = 0; j < metroMondegoIda[i].length; j++)
+      {
+        dados =  document.createElement("td");
+        dados.innerHTML = metroMondegoIda[i][j];
+        document.getElementById("linha"+i).appendChild(dados);
+      }
+    }
+    */
+
+    /*!!!!!!!!!!!!!!!!!!!!
+    TABELA 2 SÁBADO
+    !!!!!!!!!!!!!!!!!!!!*/
+
+    /*
+    titulo2 = document.createElement("h3");
+    titulo2.innerHTML = "Sábado";
+    document.getElementById("conteudo").appendChild(titulo2);
+
+    tabela2 = document.createElement("table");
+    tabela2.id = "tabela2";
+    document.getElementById("conteudo").appendChild(tabela2);
+
+    headers = document.createElement("tr");
+    headers.innerHTML = "<th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>";
+    document.getElementById("tabela2").appendChild(headers);
+    //document.getElementsByTagName("table")[0].appendChild(headers);
+    
+    for (i = 0; i < metroMondegoIdaSabado.length; i++)
+    {
+      linha2 = document.createElement("tr");
+      linha2.id = "linha2_"+i;
+      document.getElementById("tabela2").appendChild(linha2);
+      for (j = 0; j < metroMondegoIdaSabado[i].length; j++)
+      {
+        dados =  document.createElement("td");
+        dados.innerHTML = metroMondegoIdaSabado[i][j];
+        document.getElementById("linha2_"+i).appendChild(dados);
+      }
+    }
+    */
+    
     document.getElementById("conteudo").innerHTML = 
       "<h3>Segunda a Sexta</h3>"+
       "<table>"+
@@ -654,37 +714,37 @@ function mostrarHorario (horarioAMostrar)
       "<th>Serpins</th><th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>"+
       "</tr>"+ 
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[0]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[0][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[0][4]+"</td>"+
       "</tr>"+ 
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[1]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[1][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[1][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[2]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[2][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[2][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[3]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[3][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[3][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[4]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[4][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[4][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[5]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[5][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[5][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[6]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[6][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[6][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[7]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[7][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[7][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[8]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[8][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[8][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[9]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[9][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[9][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIdaDomingoFeriadoSerpins[10]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][3]+"</td>"+
+      "<td>"+metroMondegoIdaDomingoFeriado[10][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][4]+"</td>"+
       "</tr>"+
       "</table>"+
 
@@ -694,18 +754,19 @@ function mostrarHorario (horarioAMostrar)
       "<th>Partida</th><th>Chegada</th><th>Bilhete</th><th>Passe</th>"+
       "</tr>"+
       "<tr>"+
-      "<td>Lousã</td><td>São José</td><td>2,65€</td><td>44,15€</td>"+
+      "<td>Lousã</td><td>São José</td><td>2,80€</td><td>47,25€</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>Lousã</td><td>Portagem</td><td>3,15€</td><td>52,95€</td>"+
+      "<td>Lousã</td><td>Portagem</td><td>3,00€</td><td>49,80€</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>Serpins</td><td>Lousã</td><td>1,45€</td><td>34,70€</td>"+
+      "<td>Serpins</td><td>Lousã</td><td>1,45€</td><td>24,45€</td>"+
       "</tr>"+
       "</table>"+
       
       "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
     ;
+    
   }
   else if (horarioAMostrar == "metroMondegoVolta")
   {
@@ -1063,11 +1124,44 @@ function mostrarHorario (horarioAMostrar)
       "<h3>Tarifário</h3>"+
       "<table>"+
       "<tr>"+
-      "<th>Bilhete</th><th>Passe</th>"+
+      "<th>Tipo</th><th>Preço</th>"+
       "</tr>"+
       "<tr>"+
-      "<td>1.60€</td><td>30€</td>"+
-      "</tr>"+  
+      "<td>Bilhete de Motorista</td><td>1.60€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>3 Deslocações</td><td>2.20€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>4 Deslocações</td><td>2.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>5 Deslocações</td><td>3.15€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>6 Deslocações</td><td>3.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>7 Deslocações</td><td>4.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>8 Deslocações</td><td>4.65€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>9 Deslocações</td><td>5.25€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>10 Deslocações</td><td>5.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>11 Deslocações</td><td>6.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>1 Dia</td><td>3.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>Passe</td><td>30€</td>"+
+      "</tr>"+
       "</table>"+
       
       "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
@@ -1188,10 +1282,43 @@ function mostrarHorario (horarioAMostrar)
       "<h3>Tarifário</h3>"+
       "<table>"+
       "<tr>"+
-      "<th>Bilhete</th><th>Passe</th>"+
+      "<th>Tipo</th><th>Preço</th>"+
       "</tr>"+
       "<tr>"+
-      "<td>1.60€</td><td>30€</td>"+
+      "<td>Bilhete de Motorista</td><td>1.60€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>3 Deslocações</td><td>2.20€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>4 Deslocações</td><td>2.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>5 Deslocações</td><td>3.15€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>6 Deslocações</td><td>3.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>7 Deslocações</td><td>4.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>8 Deslocações</td><td>4.65€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>9 Deslocações</td><td>5.25€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>10 Deslocações</td><td>5.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>11 Deslocações</td><td>6.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>1 Dia</td><td>3.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>Passe</td><td>30€</td>"+
       "</tr>"+  
       "</table>"+
       
@@ -1259,11 +1386,44 @@ function mostrarHorario (horarioAMostrar)
       "<h3>Tarifário</h3>"+
       "<table>"+
       "<tr>"+
-      "<th>Bilhete</th><th>Passe</th>"+
+      "<th>Tipo</th><th>Preço</th>"+
       "</tr>"+
       "<tr>"+
-      "<td>1.60€</td><td>30€</td>"+
-      "</tr>"+  
+      "<td>Bilhete de Motorista</td><td>1.60€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>3 Deslocações</td><td>2.20€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>4 Deslocações</td><td>2.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>5 Deslocações</td><td>3.15€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>6 Deslocações</td><td>3.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>7 Deslocações</td><td>4.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>8 Deslocações</td><td>4.65€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>9 Deslocações</td><td>5.25€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>10 Deslocações</td><td>5.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>11 Deslocações</td><td>6.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>1 Dia</td><td>3.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>Passe</td><td>30€</td>"+
+      "</tr>"+ 
       "</table>"+
       
       "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
@@ -1402,11 +1562,44 @@ function mostrarHorario (horarioAMostrar)
       "<h3>Tarifário</h3>"+
       "<table>"+
       "<tr>"+
-      "<th>Bilhete</th><th>Passe</th>"+
+      "<th>Tipo</th><th>Preço</th>"+
       "</tr>"+
       "<tr>"+
-      "<td>1.60€</td><td>30€</td>"+
-      "</tr>"+  
+      "<td>Bilhete de Motorista</td><td>1.60€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>3 Deslocações</td><td>2.20€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>4 Deslocações</td><td>2.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>5 Deslocações</td><td>3.15€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>6 Deslocações</td><td>3.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>7 Deslocações</td><td>4.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>8 Deslocações</td><td>4.65€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>9 Deslocações</td><td>5.25€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>10 Deslocações</td><td>5.80€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>11 Deslocações</td><td>6.40€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>1 Dia</td><td>3.50€</td>"+
+      "</tr>"+
+      "<tr>"+
+      "<td>Passe</td><td>30€</td>"+
+      "</tr>"+
       "</table>"+
       
       "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"

@@ -93,3 +93,30 @@ tr:nth-child(even)
   background: green !important;
   color: white;
 }
+
+#tabela1 > #linha3,
+#tabela1 > #linha6,
+#tabela1 > #linha11,
+#tabela1 > #linha21
+{
+  background: red !important; 
+  color: white;
+}
+
+#tabela1 > #linha4,
+#tabela1 > #linha8,
+#tabela1 > #linha10,
+#tabela1 > #linha13,
+#tabela1 > #linha17,
+#tabela1 > #linha19,
+#tabela1 > #linha23,
+#tabela1 > #linha25,
+#tabela1 > #linha30,
+#tabela1 > #linha32,
+
+#linha2_3,
+#tabela2 > #linha2_3
+{
+  background: green !important;
+  color: white;
+}

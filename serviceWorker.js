@@ -1,5 +1,5 @@
 
-const staticHorariosPWA = "horarios-apw-v2.0.1"
+const staticHorariosPWA = "horarios-apw-v2.1"
 const assets = [
   "/",
   "/index.html",
