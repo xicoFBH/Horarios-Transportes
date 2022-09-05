@@ -1,7 +1,7 @@
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.2.4";
+var versao = "v2.2.5";
 
 // FUNÇÃO PARA MOSTRAR HORÁRIO
 
@@ -31,7 +31,7 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoIda[2][0]+"</td><td>"+metroMondegoIda[2][1]+"</td><td>"+metroMondegoIda[2][2]+"</td><td>"+metroMondegoIda[2][3]+"</td><td>"+metroMondegoIda[2][4]+"</td>"+
       "</tr>"+ 
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoIda[3][0]+"</td><td>"+metroMondegoIda[3][1]+"</td><td>"+metroMondegoIda[3][2]+"</td><td>"+metroMondegoIda[3][3]+"</td><td>"+metroMondegoIda[3][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
@@ -40,7 +40,7 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoIda[5][0]+"</td><td>"+metroMondegoIda[5][1]+"</td><td>"+metroMondegoIda[5][2]+"</td><td>"+metroMondegoIda[5][3]+"</td><td>"+metroMondegoIda[5][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoIda[6][0]+"</td><td>"+metroMondegoIda[6][1]+"</td><td>"+metroMondegoIda[6][2]+"</td><td>"+metroMondegoIda[6][3]+"</td><td>"+metroMondegoIda[6][4]+"</td>"+
       "</tr>"+
       "<tr>"+
@@ -300,7 +300,7 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoVolta[7][0]+"</td><td>"+metroMondegoVolta[7][1]+"</td><td>"+metroMondegoVolta[7][2]+"</td><td>"+metroMondegoVolta[7][3]+"</td><td>"+metroMondegoVolta[7][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoVolta[8][0]+"</td><td>"+metroMondegoVolta[8][1]+"</td><td>"+metroMondegoVolta[8][2]+"</td><td>"+metroMondegoVolta[8][3]+"</td><td>"+metroMondegoVolta[8][4]+"</td>"+
       "</tr>"+
       "<tr>"+
