@@ -59,6 +59,10 @@ pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", ".config"]
 
+[auth]
+pageEnabled = false
+buttonEnabled = true
+
 # TODO autocomplete relies on snippet support, which we don't advertise to LSP servers.
 # For now CSS autocomplete will use built-in codemirror, which is not perfect but good enough
 [languages.css]

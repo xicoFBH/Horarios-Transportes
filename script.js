@@ -1,7 +1,7 @@
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.2.5";
+var versao = "v2.2.6";
 
 // FUNÇÃO PARA MOSTRAR HORÁRIO
 
@@ -55,7 +55,7 @@ function mostrarHorario (horarioAMostrar)
       "<tr class='direto'>"+
       "<td>"+metroMondegoIda[10][0]+"</td><td>"+metroMondegoIda[10][1]+"</td><td>"+metroMondegoIda[10][2]+"</td><td>"+metroMondegoIda[10][3]+"</td><td>"+metroMondegoIda[10][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoIda[11][0]+"</td><td>"+metroMondegoIda[11][1]+"</td><td>"+metroMondegoIda[11][2]+"</td><td>"+metroMondegoIda[11][3]+"</td><td>"+metroMondegoIda[11][4]+"</td>"+
       "</tr>"+
       "<tr>"+
@@ -85,7 +85,7 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoIda[20][0]+"</td><td>"+metroMondegoIda[20][1]+"</td><td>"+metroMondegoIda[20][2]+"</td><td>"+metroMondegoIda[20][3]+"</td><td>"+metroMondegoIda[20][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoIda[21][0]+"</td><td>"+metroMondegoIda[21][1]+"</td><td>"+metroMondegoIda[21][2]+"</td><td>"+metroMondegoIda[21][3]+"</td><td>"+metroMondegoIda[21][4]+"</td>"+
       "</tr>"+
       "<tr>"+
@@ -312,10 +312,10 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoVolta[11][0]+"</td><td>"+metroMondegoVolta[11][1]+"</td><td>"+metroMondegoVolta[11][2]+"</td><td>"+metroMondegoVolta[11][3]+"</td><td>"+metroMondegoVolta[11][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr class='direto'>"+
       "<td>"+metroMondegoVolta[12][0]+"</td><td>"+metroMondegoVolta[12][1]+"</td><td>"+metroMondegoVolta[12][2]+"</td><td>"+metroMondegoVolta[12][3]+"</td><td>"+metroMondegoVolta[12][4]+"</td>"+
       "</tr>"+
-      "<tr class='comRestricao'>"+
+      "<tr>"+
       "<td>"+metroMondegoVolta[13][0]+"</td><td>"+metroMondegoVolta[13][1]+"</td><td>"+metroMondegoVolta[13][2]+"</td><td>"+metroMondegoVolta[13][3]+"</td><td>"+metroMondegoVolta[13][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
