@@ -1,7 +1,14 @@
+//VARIAVEIS ELEMENTOS
+
+const botaoHorario = document.getElementsByClassName("botaoHorario");
+const conteudo = document.getElementById("conteudo");
+
 // ANO E VERSÃO
 
 var ano = new Date().getFullYear();
-var versao = "v2.2.6";
+var versao = "v2.2.7";
+const rodape = `<h4>&copy;${ano} - Estúdio Esquimó - ${versao}</h4>`;
+conteudo.innerHTML = rodape;
 
 // FUNÇÃO PARA MOSTRAR HORÁRIO
 
@@ -9,66 +16,67 @@ function mostrarHorario (horarioAMostrar)
 {
   if (horarioAMostrar == "metroMondegoIda")
   {
-    document.getElementsByClassName("botaoHorario")[0].style.border = "3px solid black";
-    document.getElementsByClassName("botaoHorario")[1].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[2].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[3].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[4].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[5].style.border = "2px solid black";
+    botaoHorario[0].style.border = "3px solid black";
+    botaoHorario[1].style.border = "2px solid black";
+    botaoHorario[2].style.border = "2px solid black";
+    botaoHorario[3].style.border = "2px solid black";
+    botaoHorario[4].style.border = "2px solid black";
+    botaoHorario[5].style.border = "2px solid black";
 
-    document.getElementById("conteudo").innerHTML = 
-      "<h3>Segunda a Sexta</h3>"+
+    conteudo.innerHTML = "";
+    conteudo.innerHTML += "<h3>Segunda a Sexta</h3>";
+    conteudo.innerHTML += 
       "<table>"+
       "<tr>"+
-      "<th>Serpins</th><th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>"+
+        "<th>Serpins</th><th>Lousã</th><th>São José</th><th>Portagem</th><th>Tipo</th>"+
       "</tr>"+ 
       "<tr>"+
-      "<td>"+metroMondegoIda[0][0]+"</td><td>"+metroMondegoIda[0][1]+"</td><td>"+metroMondegoIda[0][2]+"</td><td>"+metroMondegoIda[0][3]+"</td><td>"+metroMondegoIda[0][4]+"</td>"+
+        "<td>"+metroMondegoIda[0][0]+"</td><td>"+metroMondegoIda[0][1]+"</td><td>"+metroMondegoIda[0][2]+"</td><td>"+metroMondegoIda[0][3]+"</td><td>"+metroMondegoIda[0][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[1][0]+"</td><td>"+metroMondegoIda[1][1]+"</td><td>"+metroMondegoIda[1][2]+"</td><td>"+metroMondegoIda[1][3]+"</td><td>"+metroMondegoIda[1][4]+"</td>"+
+        "<td>"+metroMondegoIda[1][0]+"</td><td>"+metroMondegoIda[1][1]+"</td><td>"+metroMondegoIda[1][2]+"</td><td>"+metroMondegoIda[1][3]+"</td><td>"+metroMondegoIda[1][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[2][0]+"</td><td>"+metroMondegoIda[2][1]+"</td><td>"+metroMondegoIda[2][2]+"</td><td>"+metroMondegoIda[2][3]+"</td><td>"+metroMondegoIda[2][4]+"</td>"+
+        "<td>"+metroMondegoIda[2][0]+"</td><td>"+metroMondegoIda[2][1]+"</td><td>"+metroMondegoIda[2][2]+"</td><td>"+metroMondegoIda[2][3]+"</td><td>"+metroMondegoIda[2][4]+"</td>"+
       "</tr>"+ 
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[3][0]+"</td><td>"+metroMondegoIda[3][1]+"</td><td>"+metroMondegoIda[3][2]+"</td><td>"+metroMondegoIda[3][3]+"</td><td>"+metroMondegoIda[3][4]+"</td>"+
+        "<td>"+metroMondegoIda[3][0]+"</td><td>"+metroMondegoIda[3][1]+"</td><td>"+metroMondegoIda[3][2]+"</td><td>"+metroMondegoIda[3][3]+"</td><td>"+metroMondegoIda[3][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[4][0]+"</td><td>"+metroMondegoIda[4][1]+"</td><td>"+metroMondegoIda[4][2]+"</td><td>"+metroMondegoIda[4][3]+"</td><td>"+metroMondegoIda[4][4]+"</td>"+
+        "<td>"+metroMondegoIda[4][0]+"</td><td>"+metroMondegoIda[4][1]+"</td><td>"+metroMondegoIda[4][2]+"</td><td>"+metroMondegoIda[4][3]+"</td><td>"+metroMondegoIda[4][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[5][0]+"</td><td>"+metroMondegoIda[5][1]+"</td><td>"+metroMondegoIda[5][2]+"</td><td>"+metroMondegoIda[5][3]+"</td><td>"+metroMondegoIda[5][4]+"</td>"+
+        "<td>"+metroMondegoIda[5][0]+"</td><td>"+metroMondegoIda[5][1]+"</td><td>"+metroMondegoIda[5][2]+"</td><td>"+metroMondegoIda[5][3]+"</td><td>"+metroMondegoIda[5][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[6][0]+"</td><td>"+metroMondegoIda[6][1]+"</td><td>"+metroMondegoIda[6][2]+"</td><td>"+metroMondegoIda[6][3]+"</td><td>"+metroMondegoIda[6][4]+"</td>"+
+        "<td>"+metroMondegoIda[6][0]+"</td><td>"+metroMondegoIda[6][1]+"</td><td>"+metroMondegoIda[6][2]+"</td><td>"+metroMondegoIda[6][3]+"</td><td>"+metroMondegoIda[6][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[7][0]+"</td><td>"+metroMondegoIda[7][1]+"</td><td>"+metroMondegoIda[7][2]+"</td><td>"+metroMondegoIda[7][3]+"</td><td>"+metroMondegoIda[7][4]+"</td>"+
+        "<td>"+metroMondegoIda[7][0]+"</td><td>"+metroMondegoIda[7][1]+"</td><td>"+metroMondegoIda[7][2]+"</td><td>"+metroMondegoIda[7][3]+"</td><td>"+metroMondegoIda[7][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[8][0]+"</td><td>"+metroMondegoIda[8][1]+"</td><td>"+metroMondegoIda[8][2]+"</td><td>"+metroMondegoIda[8][3]+"</td><td>"+metroMondegoIda[8][4]+"</td>"+
+        "<td>"+metroMondegoIda[8][0]+"</td><td>"+metroMondegoIda[8][1]+"</td><td>"+metroMondegoIda[8][2]+"</td><td>"+metroMondegoIda[8][3]+"</td><td>"+metroMondegoIda[8][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[9][0]+"</td><td>"+metroMondegoIda[9][1]+"</td><td>"+metroMondegoIda[9][2]+"</td><td>"+metroMondegoIda[9][3]+"</td><td>"+metroMondegoIda[9][4]+"</td>"+
+        "<td>"+metroMondegoIda[9][0]+"</td><td>"+metroMondegoIda[9][1]+"</td><td>"+metroMondegoIda[9][2]+"</td><td>"+metroMondegoIda[9][3]+"</td><td>"+metroMondegoIda[9][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
       "<td>"+metroMondegoIda[10][0]+"</td><td>"+metroMondegoIda[10][1]+"</td><td>"+metroMondegoIda[10][2]+"</td><td>"+metroMondegoIda[10][3]+"</td><td>"+metroMondegoIda[10][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[11][0]+"</td><td>"+metroMondegoIda[11][1]+"</td><td>"+metroMondegoIda[11][2]+"</td><td>"+metroMondegoIda[11][3]+"</td><td>"+metroMondegoIda[11][4]+"</td>"+
+        "<td>"+metroMondegoIda[11][0]+"</td><td>"+metroMondegoIda[11][1]+"</td><td>"+metroMondegoIda[11][2]+"</td><td>"+metroMondegoIda[11][3]+"</td><td>"+metroMondegoIda[11][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[12][0]+"</td><td>"+metroMondegoIda[12][1]+"</td><td>"+metroMondegoIda[12][2]+"</td><td>"+metroMondegoIda[12][3]+"</td><td>"+metroMondegoIda[12][4]+"</td>"+
+        "<td>"+metroMondegoIda[12][0]+"</td><td>"+metroMondegoIda[12][1]+"</td><td>"+metroMondegoIda[12][2]+"</td><td>"+metroMondegoIda[12][3]+"</td><td>"+metroMondegoIda[12][4]+"</td>"+
       "</tr>"+
       "<tr class='direto'>"+
-      "<td>"+metroMondegoIda[13][0]+"</td><td>"+metroMondegoIda[13][1]+"</td><td>"+metroMondegoIda[13][2]+"</td><td>"+metroMondegoIda[13][3]+"</td><td>"+metroMondegoIda[13][4]+"</td>"+
+        "<td>"+metroMondegoIda[13][0]+"</td><td>"+metroMondegoIda[13][1]+"</td><td>"+metroMondegoIda[13][2]+"</td><td>"+metroMondegoIda[13][3]+"</td><td>"+metroMondegoIda[13][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[14][0]+"</td><td>"+metroMondegoIda[14][1]+"</td><td>"+metroMondegoIda[14][2]+"</td><td>"+metroMondegoIda[14][3]+"</td><td>"+metroMondegoIda[14][4]+"</td>"+
+        "<td>"+metroMondegoIda[14][0]+"</td><td>"+metroMondegoIda[14][1]+"</td><td>"+metroMondegoIda[14][2]+"</td><td>"+metroMondegoIda[14][3]+"</td><td>"+metroMondegoIda[14][4]+"</td>"+
       "</tr>"+
       "<tr>"+
-      "<td>"+metroMondegoIda[15][0]+"</td><td>"+metroMondegoIda[15][1]+"</td><td>"+metroMondegoIda[15][2]+"</td><td>"+metroMondegoIda[15][3]+"</td><td>"+metroMondegoIda[15][4]+"</td>"+
+        "<td>"+metroMondegoIda[15][0]+"</td><td>"+metroMondegoIda[15][1]+"</td><td>"+metroMondegoIda[15][2]+"</td><td>"+metroMondegoIda[15][3]+"</td><td>"+metroMondegoIda[15][4]+"</td>"+
       "</tr>"+
       "<tr>"+
       "<td>"+metroMondegoIda[16][0]+"</td><td>"+metroMondegoIda[16][1]+"</td><td>"+metroMondegoIda[16][2]+"</td><td>"+metroMondegoIda[16][3]+"</td><td>"+metroMondegoIda[16][4]+"</td>"+
@@ -240,38 +248,42 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoIdaDomingoFeriado[10][0]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][1]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][2]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][3]+"</td><td>"+metroMondegoIdaDomingoFeriado[10][4]+"</td>"+
       "</tr>"+
-      "</table>"+
-
-      "<h3>Tarifário</h3>"+
-      "<table>"+
-      "<tr>"+
-      "<th>Partida</th><th>Chegada</th><th>Bilhete</th><th>Passe</th>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Lousã</td><td>São José</td><td>2,80€</td><td>47,25€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Lousã</td><td>Portagem</td><td>3,00€</td><td>49,80€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Serpins</td><td>Lousã</td><td>1,45€</td><td>24,45€</td>"+
-      "</tr>"+
-      "</table>"+
-      
-      "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
+      "</table>"
     ;
-    
+
+    conteudo.innerHTML += "<h3>Tarifário</h3>";
+    conteudo.innerHTML +=
+    `
+      <table>
+      <tr>
+        <th>Partida</th><th>Chegada</th><th>Bilhete</th><th>Passe</th>
+      </tr>
+      <tr>
+        <td>Lousã</td><td>São José</td><td>2,80€</td><td>47,25€</td>
+      </tr>
+      <tr>
+        <td>Lousã</td><td>Portagem</td><td>3,00€</td><td>49,80€</td>
+      </tr>
+      <tr>
+        <td>Serpins</td><td>Lousã</td><td>1,45€</td><td>24,45€</td>
+      </tr>
+      </table>
+    `;
+    conteudo.innerHTML += rodape;
   }
   else if (horarioAMostrar == "metroMondegoVolta")
   {
-    document.getElementsByClassName("botaoHorario")[0].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[1].style.border = "3px solid black";
-    document.getElementsByClassName("botaoHorario")[2].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[3].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[4].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[5].style.border = "2px solid black";
-    document.getElementById("conteudo").innerHTML = 
-      "<h3>Segunda a Sexta</h3>"+
+    botaoHorario[0].style.border = "2px solid black";
+    botaoHorario[1].style.border = "3px solid black";
+    botaoHorario[2].style.border = "2px solid black";
+    botaoHorario[3].style.border = "2px solid black";
+    botaoHorario[4].style.border = "2px solid black";
+    botaoHorario[5].style.border = "2px solid black";
+
+    conteudo.innerHTML = "";
+    conteudo.innerHTML += "<h3>Segunda a Sexta</h3>";
+    
+    conteudo.innerHTML +=
       "<table>"+
       "<tr>"+
       "<th>Portagem</th><th>São José</th><th>Lousã</th><th>Serpins</th><th>Tipo</th>"+
@@ -479,187 +491,194 @@ function mostrarHorario (horarioAMostrar)
       "<tr>"+
       "<td>"+metroMondegoVoltaDomingoFeriado[10][0]+"</td><td>"+metroMondegoVoltaDomingoFeriado[10][1]+"</td><td>"+metroMondegoVoltaDomingoFeriado[10][2]+"</td><td>"+metroMondegoVoltaDomingoFeriado[10][3]+"</td><td>"+metroMondegoVoltaDomingoFeriado[10][4]+"</td>"+
       "</tr>"+
-      "</table>"+
+      "</table>";
 
-      "<h3>Tarifário</h3>"+
-      "<table>"+
-      "<tr>"+
-      "<th>Partida</th><th>Chegada</th><th>Bilhete</th><th>Passe</th>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>São José</td><td>Lousã</td><td>2,80€</td><td>47,25€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Portagem</td><td>Lousã</td><td>3,00€</td><td>49,80€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Lousã</td><td>Serpins</td><td>1,45€</td><td>24,45€</td>"+
-      "</tr>"+
-      "</table>"+
+
+      conteudo.innerHTML += 
+      `
+       <h3>Tarifário</h3>
+       <table>
+       <tr>
+         <th>Partida</th><th>Chegada</th><th>Bilhete</th><th>Passe</th>
+      </tr>
+      <tr>
+        <td>São José</td><td>Lousã</td><td>2,80€</td><td>47,25€</td>
+      </tr>
+      <tr>
+        <td>Portagem</td><td>Lousã</td><td>3,00€</td><td>49,80€</td>
+      </tr>
+      <tr>
+        <td>Lousã</td><td>Serpins</td><td>1,45€</td><td>24,45€</td>
+      </tr>
+      </table>
+      `
       
-      "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
+      conteudo.innerHTML += "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
     ;
   }
   else if (horarioAMostrar == "smtuc5ida")
   {
-    document.getElementsByClassName("botaoHorario")[0].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[1].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[2].style.border = "3px solid black";
-    document.getElementsByClassName("botaoHorario")[3].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[4].style.border = "2px solid black";
-    document.getElementsByClassName("botaoHorario")[5].style.border = "2px solid black";
-    document.getElementById("conteudo").innerHTML = 
-      "<h3>Segunda a Sexta</h3>"+
-      "<table>"+
-      "<tr>"+
-      "<th>Estádio</th><th>Pedrulha</th>"+
-      "</tr>"+ 
-      "<tr>"+
-      "<td>"+SMTUC5Ida[0][0]+"</td><td>"+SMTUC5Ida[0][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[1][0]+"</td><td>"+SMTUC5Ida[1][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[2][0]+"</td><td>"+SMTUC5Ida[2][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[3][0]+"</td><td>"+SMTUC5Ida[3][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[4][0]+"</td><td>"+SMTUC5Ida[4][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[5][0]+"</td><td>"+SMTUC5Ida[5][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[6][0]+"</td><td>"+SMTUC5Ida[6][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[7][0]+"</td><td>"+SMTUC5Ida[7][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[8][0]+"</td><td>"+SMTUC5Ida[8][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[9][0]+"</td><td>"+SMTUC5Ida[9][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[10][0]+"</td><td>"+SMTUC5Ida[10][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[11][0]+"</td><td>"+SMTUC5Ida[11][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[12][0]+"</td><td>"+SMTUC5Ida[12][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[13][0]+"</td><td>"+SMTUC5Ida[13][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[14][0]+"</td><td>"+SMTUC5Ida[14][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[15][0]+"</td><td>"+SMTUC5Ida[15][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[16][0]+"</td><td>"+SMTUC5Ida[16][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[17][0]+"</td><td>"+SMTUC5Ida[17][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[18][0]+"</td><td>"+SMTUC5Ida[18][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[19][0]+"</td><td>"+SMTUC5Ida[19][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[20][0]+"</td><td>"+SMTUC5Ida[20][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[21][0]+"</td><td>"+SMTUC5Ida[21][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[22][0]+"</td><td>"+SMTUC5Ida[22][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[23][0]+"</td><td>"+SMTUC5Ida[23][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[24][0]+"</td><td>"+SMTUC5Ida[24][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[25][0]+"</td><td>"+SMTUC5Ida[25][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[26][0]+"</td><td>"+SMTUC5Ida[26][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[27][0]+"</td><td>"+SMTUC5Ida[27][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[28][0]+"</td><td>"+SMTUC5Ida[28][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[29][0]+"</td><td>"+SMTUC5Ida[29][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[30][0]+"</td><td>"+SMTUC5Ida[30][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[31][0]+"</td><td>"+SMTUC5Ida[31][1]+"</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>"+SMTUC5Ida[32][0]+"</td><td>"+SMTUC5Ida[32][1]+"</td>"+
-      "</tr>"+
-      "</table>"+
-
-      "<h3>Tarifário</h3>"+
-      "<table>"+
-      "<tr>"+
-      "<th>Tipo</th><th>Preço</th>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Bilhete de Motorista</td><td>1.60€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>3 Deslocações</td><td>2.20€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>4 Deslocações</td><td>2.50€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>5 Deslocações</td><td>3.15€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>6 Deslocações</td><td>3.80€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>7 Deslocações</td><td>4.40€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>8 Deslocações</td><td>4.65€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>9 Deslocações</td><td>5.25€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>10 Deslocações</td><td>5.80€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>11 Deslocações</td><td>6.40€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>1 Dia</td><td>3.50€</td>"+
-      "</tr>"+
-      "<tr>"+
-      "<td>Passe</td><td>30€</td>"+
-      "</tr>"+
-      "</table>"+
-      
-      "<h4>&copy;"+ano+" - Estúdio Esquimó - "+versao+"</h4>"
-      ;
+    botaoHorario[0].style.border = "2px solid black";
+    botaoHorario[1].style.border = "2px solid black";
+    botaoHorario[2].style.border = "3px solid black";
+    botaoHorario[3].style.border = "2px solid black";
+    botaoHorario[4].style.border = "2px solid black";
+    botaoHorario[5].style.border = "2px solid black";
+    conteudo.innerHTML = "";
+    conteudo.innerHTML += "<h3>Segunda a Sexta</h3>";
+    conteudo.innerHTML += 
+    `
+      <table>
+      <tr>
+      <th>Estádio</th><th>Pedrulha</th>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[0][0]}</td><td>${SMTUC5Ida[0][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[1][0]}</td><td>${SMTUC5Ida[1][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[2][0]}</td><td>${SMTUC5Ida[2][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[3][0]}</td><td>${SMTUC5Ida[3][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[4][0]}</td><td>${SMTUC5Ida[4][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[5][0]}</td><td>${SMTUC5Ida[5][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[6][0]}</td><td>${SMTUC5Ida[6][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[7][0]}</td><td>${SMTUC5Ida[7][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[8][0]}</td><td>${SMTUC5Ida[8][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[9][0]}</td><td>${SMTUC5Ida[9][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[10][0]}</td><td>${SMTUC5Ida[10][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[11][0]}</td><td>${SMTUC5Ida[11][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[12][0]}</td><td>${SMTUC5Ida[12][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[13][0]}</td><td>${SMTUC5Ida[13][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[14][0]}</td><td>${SMTUC5Ida[14][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[15][0]}</td><td>${SMTUC5Ida[15][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[16][0]}</td><td>${SMTUC5Ida[16][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[17][0]}</td><td>${SMTUC5Ida[17][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[18][0]}</td><td>${SMTUC5Ida[18][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[19][0]}</td><td>${SMTUC5Ida[19][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[20][0]}</td><td>${SMTUC5Ida[20][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[21][0]}</td><td>${SMTUC5Ida[21][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[22][0]}</td><td>${SMTUC5Ida[22][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[23][0]}</td><td>${SMTUC5Ida[23][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[24][0]}</td><td>${SMTUC5Ida[24][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[25][0]}</td><td>${SMTUC5Ida[25][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[26][0]}</td><td>${SMTUC5Ida[26][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[27][0]}</td><td>${SMTUC5Ida[27][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[28][0]}</td><td>${SMTUC5Ida[28][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[29][0]}</td><td>${SMTUC5Ida[29][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[30][0]}</td><td>${SMTUC5Ida[30][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[31][0]}</td><td>${SMTUC5Ida[31][1]}</td>
+      </tr>
+      <tr>
+        <td>${SMTUC5Ida[32][0]}</td><td>${SMTUC5Ida[32][1]}</td>
+      </tr>
+      </table>
+    `;
+    conteudo.innerHTML += "<h3>Tarifário</h3>";
+    conteudo.innerHTML +=
+    `
+      <table>
+      <tr>
+        <th>Tipo</th><th>Preço</th>
+      </tr>
+      <tr>
+        <td>Bilhete de Motorista</td><td>1.60€</td>
+      </tr>
+      <tr>
+        <td>3 Deslocações</td><td>2.20€</td>
+      </tr>
+      <tr>
+        <td>4 Deslocações</td><td>2.50€</td>
+      </tr>
+      <tr>
+        <td>5 Deslocações</td><td>3.15€</td>
+      </tr>
+      <tr>
+        <td>6 Deslocações</td><td>3.80€</td>
+      </tr>
+      <tr>
+        <td>7 Deslocações</td><td>4.40€</td>
+      </tr>
+      <tr>
+        <td>8 Deslocações</td><td>4.65€</td>
+      </tr>
+      <tr>
+        <td>9 Deslocações</td><td>5.25€</td>
+      </tr>
+      <tr>
+        <td>10 Deslocações</td><td>5.80€</td>
+      </tr>
+      <tr>
+        <td>11 Deslocações</td><td>6.40€</td>
+      </tr>
+      <tr>
+       <td>1 Dia</td><td>3.50€</td>
+      </tr>
+      <tr>
+        <td>Passe</td><td>30€</td>
+      </tr>
+      </table>
+    `; 
+    conteudo.innerHTML += rodape;
   }
   else if (horarioAMostrar == "smtuc5volta")
   {
